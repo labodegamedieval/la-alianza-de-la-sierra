@@ -297,96 +297,108 @@
                     Déjanos tus datos. En <24 h tienes propuesta personalizada.
                 </p>
 
-                <form name="conclave-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" action="/gracias.html" class="space-y-6 bg-crema p-6 sm:p-10 md:p-12 shadow-xl rounded-xl">
-                    <input type="hidden" name="form-name" value="conclave-contact" />
-                    <input type="hidden" name="subject" value="Nueva solicitud - El Cónclave de San Martín" />
-                    <p class="hidden"><label>Bot: <input name="bot-field" /></label></p>
+                <form 
+  name="conclave-contact"
+  method="POST"
+  netlify
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  action="/gracias.html"
+  class="space-y-6 bg-crema p-6 sm:p-10 md:p-12 shadow-xl rounded-xl"
+>
+  <!-- Netlify required -->
+  <input type="hidden" name="form-name" value="conclave-contact">
 
-                    <input type="text" name="nombre" required placeholder="Nombre" class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado">
-                    <input type="email" name="email" required placeholder="Email profesional" class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado">
-                    <input type="text" name="empresa" required placeholder="Empresa" class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado">
-                    <input type="tel" name="telefono" required placeholder="Teléfono" class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado">
+  <!-- Honeypot -->
+  <p class="hidden">
+    <label>Bot: <input name="bot-field"></label>
+  </p>
 
-                    <select name="asistentes" required class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado">
-                        <option value="">Número de personas</option>
-                        <option value="4">4 personas</option>
-                        <option value="5">5 personas</option>
-                        <option value="6">6 personas</option>
-                        <option value="7">7 personas</option>
-                        <option value="8">8 personas</option>
-                        <option value="9">9 personas</option>
-                        <option value="10">10 personas</option>
-                        <option value="11">11 personas</option>
-                        <option value="12">12 personas</option>
-                        <option value="13">13 personas</option>
-                        <option value="14">14 personas</option>
-                        <option value="15">15 personas</option>
-                        <option value="mas-de-15">+ de 15 personas</option>
-                    </select>
+  <input type="text" name="nombre" required placeholder="Nombre"
+    class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado">
 
-                    <textarea name="objetivos" rows="3" placeholder="¿Qué queréis conseguir con este día?" class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado resize-none"></textarea>
+  <input type="email" name="email" required placeholder="Email profesional"
+    class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado">
 
-                    <div class="text-left border-b-2 border-gray-400 pb-6">
-                        <p class="text-gray-700 mb-4 font-light">La experiencia incluye: <span class="font-medium text-granate">Juego de Misterio + Bodega Medieval</span></p>
-                        
-                        <p class="text-gray-600 text-sm mb-3">Servicios opcionales con empresas colaboradoras:</p>
-                        
-                        <div class="space-y-3">
-                            <label class="flex items-start cursor-pointer group">
-                                <input type="checkbox" name="transporte" value="si" class="mt-1 mr-3 w-4 h-4 accent-dorado">
-                                <span class="text-gray-700 group-hover:text-granate transition-colors">
-                                    <span class="font-medium">Transporte</span>
-                                    <span class="text-sm text-gray-600 block">Con empresa colaboradora</span>
-                                </span>
-                            </label>
+  <input type="text" name="empresa" required placeholder="Empresa"
+    class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado">
 
-                            <label class="flex items-start cursor-pointer group">
-                                <input type="checkbox" name="guia" value="si" class="mt-1 mr-3 w-4 h-4 accent-dorado">
-                                <span class="text-gray-700 group-hover:text-granate transition-colors">
-                                    <span class="font-medium">Guía Turística</span>
-                                    <span class="text-sm text-gray-600 block">Guía turística profesional certificada en la Sierra de Francia</span>
-                                </span>
-                            </label>
-                            
-                            <label class="flex items-start cursor-pointer group">
-                                <input type="checkbox" name="restaurante" value="si" class="mt-1 mr-3 w-4 h-4 accent-dorado">
-                                <span class="text-gray-700 group-hover:text-granate transition-colors">
-                                    <span class="font-medium">Comida en restaurante</span>
-                                    <span class="text-sm text-gray-600 block">Restaurante asociado con vistas espectaculares</span>
-                                </span>
-                            </label>
-                            
-                            <label class="flex items-start cursor-pointer group">
-                                <input type="checkbox" name="sala-reuniones" value="si" class="mt-1 mr-3 w-4 h-4 accent-dorado">
-                                <span class="text-gray-700 group-hover:text-granate transition-colors">
-                                    <span class="font-medium">Sala de reuniones</span>
-                                    <span class="text-sm text-gray-600 block">Espacio para reuniones de equipo</span>
-                                </span>
-                            </label>
-                            
-                            <label class="flex items-start cursor-pointer group">
-                                <input type="checkbox" name="alojamiento" value="si" class="mt-1 mr-3 w-4 h-4 accent-dorado">
-                                <span class="text-gray-700 group-hover:text-granate transition-colors">
-                                    <span class="font-medium">Alojamiento</span>
-                                    <span class="text-sm text-gray-600 block">Con empresa colaboradora</span>
-                                </span>
-                            </label>
-                        </div>
-                    </div>
+  <input type="tel" name="telefono" required placeholder="Teléfono"
+    class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado">
 
-                    <div class="text-left">
-                        <label class="block text-gray-700 mb-2 font-light">Fecha preferida</label>
-                        <input type="date" name="fecha" required class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado">
-                    </div>
+  <select name="asistentes" required
+    class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado">
+    <option value="">Número de personas</option>
+    <option value="4">4 personas</option>
+    <option value="5">5 personas</option>
+    <option value="6">6 personas</option>
+    <option value="7">7 personas</option>
+    <option value="8">8 personas</option>
+    <option value="9">9 personas</option>
+    <option value="10">10 personas</option>
+    <option value="11">11 personas</option>
+    <option value="12">12 personas</option>
+    <option value="13">13 personas</option>
+    <option value="14">14 personas</option>
+    <option value="15">15 personas</option>
+    <option value="mas-de-15">+ de 15 personas</option>
+  </select>
 
-                    <button type="submit" class="btn-primary w-full py-5 text-white font-medium text-lg tracking-wider mt-4">
-                        Recibir propuesta personalizada
-                    </button>
+  <textarea name="objetivos" rows="3" placeholder="¿Qué queréis conseguir con este día?"
+    class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado resize-none"></textarea>
 
-                    <p class="text-sm text-gray-600 text-center mt-4">
-                        Respuesta en menos de 24 horas
-                    </p>
-                </form>
+  <div class="text-left border-b-2 border-gray-400 pb-6">
+    <p class="text-gray-700 mb-4 font-light">
+      La experiencia incluye: 
+      <span class="font-medium text-granate">Juego de Misterio + Bodega Medieval</span>
+    </p>
+
+    <p class="text-gray-600 text-sm mb-3">Servicios opcionales:</p>
+
+    <div class="space-y-3">
+      <label class="flex items-start cursor-pointer group">
+        <input type="checkbox" name="transporte" value="si" class="mt-1 mr-3 w-4 h-4 accent-dorado">
+        <span class="text-gray-700">Transporte</span>
+      </label>
+
+      <label class="flex items-start cursor-pointer group">
+        <input type="checkbox" name="guia" value="si" class="mt-1 mr-3 w-4 h-4 accent-dorado">
+        <span class="text-gray-700">Guía Turística</span>
+      </label>
+
+      <label class="flex items-start cursor-pointer group">
+        <input type="checkbox" name="restaurante" value="si" class="mt-1 mr-3 w-4 h-4 accent-dorado">
+        <span class="text-gray-700">Comida en restaurante</span>
+      </label>
+
+      <label class="flex items-start cursor-pointer group">
+        <input type="checkbox" name="sala-reuniones" value="si" class="mt-1 mr-3 w-4 h-4 accent-dorado">
+        <span class="text-gray-700">Sala de reuniones</span>
+      </label>
+
+      <label class="flex items-start cursor-pointer group">
+        <input type="checkbox" name="alojamiento" value="si" class="mt-1 mr-3 w-4 h-4 accent-dorado">
+        <span class="text-gray-700">Alojamiento</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="text-left">
+    <label class="block text-gray-700 mb-2 font-light">Fecha preferida</label>
+    <input type="date" name="fecha" required
+      class="w-full px-5 py-4 border-b-2 border-gray-400 bg-transparent focus:border-dorado">
+  </div>
+
+  <button type="submit"
+    class="btn-primary w-full py-5 text-white font-medium text-lg tracking-wider mt-4">
+    Recibir propuesta personalizada
+  </button>
+
+  <p class="text-sm text-gray-600 text-center mt-4">
+    Respuesta en menos de 24 horas
+  </p>
+</form>
+
             </div>
         </div>
     </section>
